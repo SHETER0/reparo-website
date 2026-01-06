@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ريباريو (Reparo) | نظام إدارة محلات صيانة الجوالات الذكي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #2563eb 0%, #1eaf90 100%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed z-50 w-full border-b bg-white/80 backdrop-blur-md">
+        <div class="flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
+            <div class="flex items-center gap-2">
+                <div class="rounded-lg text-whit ">
+                    <img src="images/reparo.ico" class="size-10" alt="asd">
+                </div>
+                <span class="text-2xl font-black tracking-tight text-green-900">Reparo</span>
+            </div>
+            <div class="hidden space-x-8 space-x-reverse font-bold md:flex text-slate-600">
+                <a href="#features" class="transition hover:text-green-600">المميزات</a>
+                <a href="#trust" class="transition hover:text-green-600">بناء الثقة</a>
+                <a href="#tech" class="transition hover:text-green-600">التقنيات</a>
+            </div>
+            <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" class="bg-green-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-green-700 transition shadow-lg shadow-green-200">
+                تحميل الإصدار 1.0.0
+            </a>
+        </div>
+    </nav>
+
+    <header class="px-6 pt-32 pb-20">
+        <div class="grid items-center gap-16 mx-auto max-w-7xl md:grid-cols-2">
+            <div>
+                <span class="inline-block bg-green-100 text-green-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                    🚀 الإدارة الذكية لمحلات الصيانة
+                </span>
+                <h1 class="text-4xl font-black leading-tight md:text-6xl text-slate-900">
+                    حول محلك إلى <span class="text-green-600">مركز صيانة احترافي</span>
+                </h1>
+                <p class="max-w-lg mt-6 text-lg leading-relaxed text-slate-600">
+                    إدارة التذاكر، تتبع المخزون، وبناء ثقة مطلقة مع عملائك من خلال نظام يعمل "بدون إنترنت" صُمم خصيصاً لخبراء صيانة الجوالات.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-10">
+                <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" class="flex items-center gap-2 px-8 py-4 text-lg font-bold text-white transition bg-slate-900 rounded-2xl hover:bg-slate-800">
+                        ابدأ الآن مجاناً <i class="mr-2 text-sm fas fa-chevron-left"></i>
+                        </a>
+                    <div class="flex items-center gap-4 px-4 text-sm font-medium text-slate-500">
+                        <i class="text-xl fab fa-windows"></i>
+                        <i class="text-xl fab fa-apple"></i>
+                        <i class="text-xl fab fa-linux"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="p-4 overflow-hidden border-4 shadow-2xl bg-slate-800 rounded-3xl border-slate-700">
+                    <div class="bg-slate-900 rounded-2xl h-[350px] flex items-center justify-center text-slate-500 italic relative">
+                        <img src="images/reparo Dashboard.png" alt="Dashboard" class="object-cover w-full h-full opacity-40">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                             <p class="mb-2 text-xl font-bold text-white">لوحة تحكم وتحليلات متقدمة</p>
+                             <p class="text-slate-400">رؤى مباشرة مدعومة بالذكاء الاصطناعي</p>
+                        </div>
+                    </div>
+                </div>
+<div class="absolute -bottom-6 -right-6 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 flex items-center gap-4 max-w-[320px] transition-all duration-500" id="whatsapp-badge">
+    <div class="p-3 text-white bg-green-500 rounded-xl animate-bounce">
+        <i class="text-2xl fab fa-whatsapp"></i>
+    </div>
+    <div class="overflow-hidden">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter mb-1">تحديث تلقائي للنظام</p>
+        <p id="template-text" class="text-xs font-bold leading-tight transition-opacity duration-500 text-slate-700">
+            جاري الاتصال بالنظام...
+        </p>
+    </div>
+</div>
+            </div>
+        </div>
+    </header>
+
+<section id="trust-and-reviews" class="relative py-24 overflow-hidden bg-slate-900">
+    <div class="absolute top-0 left-0 rounded-full w-96 h-96 bg-green-600/10 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 rounded-full w-96 h-96 bg-green-600/10 blur-3xl"></div>
+
+    <div class="relative z-10 px-6 mx-auto max-w-7xl">
+        <div class="grid items-start gap-16 lg:grid-cols-12">
+            
+            <div class="text-right lg:col-span-7">
+                <h2 class="mb-8 text-4xl font-black leading-tight text-white md:text-5xl">
+                    الثقة هي أغلى ما تملك.. <br>
+                    <span class="text-green-500">Reparo يحميها لك.</span>
+                </h2>
+                
+                <div class="mt-12 space-y-10">
+                    <div class="flex items-start gap-6">
+                        <div class="p-4 text-blue-400 border bg-blue-600/20 rounded-2xl border-blue-500/30">
+                            <i class="text-2xl fas fa-certificate"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2 text-xl font-bold text-white">احترافية فائقة</h4>
+                            <p class="leading-relaxed text-slate-400">تخلص من الملاحظات الورقية. الفواتير الرقمية والرسائل المنظمة تعطي انطباعاً بأنك مركز صيانة معتمد وضخم.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="p-4 text-indigo-400 border bg-indigo-600/20 rounded-2xl border-indigo-500/30">
+                            <i class="text-2xl fas fa-eye"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2 text-xl font-bold text-white">شفافية كاملة</h4>
+                            <p class="leading-relaxed text-slate-400">إمكانية تتبع حالة الإصلاح فورياً تزيد من طمأنينة العميل وتجعله يثق بجودة عملك ومصداقية محلك.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="p-4 text-purple-400 border bg-purple-600/20 rounded-2xl border-purple-500/30">
+                            <i class="text-2xl fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2 text-xl font-bold text-white">حفظ الحقوق والبيانات</h4>
+                            <p class="leading-relaxed text-slate-400">توثيق حالة الجهاز عند الاستلام يحميك ويضمن حق العميل، مما يبني علاقة طويلة الأمد مبنية على الثقة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:col-span-5">
+                <div class="bg-blue-600 p-1 rounded-[2.5rem] shadow-2xl shadow-blue-500/20">
+                    <div class="bg-white rounded-[2.2rem] p-8 md:p-10 relative overflow-hidden">
+                        
+                        <div class="mb-8 text-center">
+                            <h3 class="text-xl font-black text-slate-800">قالوا عن Reparo</h3>
+                            <div class="flex justify-center gap-1 mt-2 text-yellow-400">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+<div class="overflow-hidden swiper mySwiper">
+    <div class="swiper-wrapper">
+        
+        <div class="relative px-4 py-8 text-center swiper-slide">
+            <i class="absolute text-6xl opacity-50 fas fa-quote-right top-4 right-4 text-blue-50"></i>
+            <p class="relative z-10 mb-8 text-lg font-medium leading-relaxed md:text-xl text-slate-700">
+                "انتهت فوضى قطع الغيار! مع Reparo، أتابع كل شاشة وبطارية في المستودع بضغطة زر. التقارير دقيقة وتساعدنا في العمل."
+            </p>
+            <div class="flex flex-col items-center pt-6 border-t border-slate-100">
+                <div class="flex items-center justify-center mb-3 text-xl font-bold text-white bg-blue-600 rounded-full shadow-lg w-14 h-14">ف.أ</div>
+                <p class="font-black text-slate-900">فهد الأحمد</p>
+                <p class="text-sm text-slate-500">مدير المخزون</p>
+            </div>
+        </div>
+
+        <div class="relative px-4 py-8 text-center swiper-slide">
+            <i class="absolute text-6xl opacity-50 fas fa-quote-right top-4 right-4 text-blue-50"></i>
+            <p class="relative z-10 mb-8 text-lg font-medium leading-relaxed md:text-xl text-slate-700">
+                "نظام رائع جداً، ميزة إرسال رسائل الواتساب وفرت علينا الكثير من الوقت في التواصل مع العملاء وزادت من احترافية المحل."
+            </p>
+            <div class="flex flex-col items-center pt-6 border-t border-slate-100">
+                <div class="flex items-center justify-center mb-3 text-xl font-bold text-white bg-green-600 rounded-full shadow-lg w-14 h-14">س.م</div>
+                <p class="font-black text-slate-900">سعيد محمد</p>
+                <p class="text-sm text-slate-500">صاحب مركز صيانة</p>
+            </div>
+        </div>
+
+        <div class="relative px-4 py-8 text-center swiper-slide">
+            <i class="absolute text-6xl opacity-50 fas fa-quote-right top-4 right-4 text-blue-50"></i>
+            <p class="relative z-10 mb-8 text-lg font-medium leading-relaxed md:text-xl text-slate-700">
+                "واجهة المستخدم سهلة جداً والفنيين تعودوا عليها بسرعة. ميزة العمل بدون إنترنت أنقذتنا في الكثير من الأوقات."
+            </p>
+            <div class="flex flex-col items-center pt-6 border-t border-slate-100">
+                <div class="flex items-center justify-center mb-3 text-xl font-bold text-white bg-purple-600 rounded-full shadow-lg w-14 h-14">خ.و</div>
+                <p class="font-black text-slate-900">خالد وليد</p>
+                <p class="text-sm text-slate-500">فني جوالات</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="swiper-pagination !static mt-8"></div>
+</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="features" class="px-6 py-24 mx-auto text-right max-w-7xl">
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl font-black text-slate-900">أبرز المميزات</h2>
+            <p class="mt-4 font-medium text-slate-500">نظام متكامل صُمم لرفع كفاءة عملك.</p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-3">
+            <div class="p-8 transition-all bg-white border rounded-3xl border-slate-200 hover:border-green-500 hover:shadow-xl group">
+                <div class="flex items-center justify-center mb-6 text-green-600 transition-colors w-14 h-14 bg-green-50 rounded-2xl group-hover:bg-green-600 group-hover:text-white">
+                    <i class="text-2xl fas fa-ticket-alt"></i>
+                </div>
+                <h3 class="mb-3 text-xl font-bold">إدارة تذاكر الصيانة</h3>
+                <p class="leading-relaxed text-slate-600">تتبع الجهاز من لحظة الاستلام وحتى التسليم مع طباعة إيصالات احترافية برمز QR.</p>
+            </div>
+            <div class="p-8 transition-all bg-white border rounded-3xl border-slate-200 hover:border-green-500 hover:shadow-xl group">
+                <div class="flex items-center justify-center mb-6 text-green-600 transition-colors w-14 h-14 bg-green-50 rounded-2xl group-hover:bg-green-600 group-hover:text-white">
+                    <i class="text-2xl fab fa-whatsapp"></i>
+                </div>
+                <h3 class="mb-3 text-xl font-bold">الربط مع واتساب</h3>
+                <p class="leading-relaxed text-slate-600">إرسال إشعارات تلقائية للعملاء عند انتهاء الإصلاح أو تحديث الحالة بضغطة زر.</p>
+            </div>
+            <div class="p-8 transition-all bg-white border rounded-3xl border-slate-200 hover:border-purple-500 hover:shadow-xl group">
+                <div class="flex items-center justify-center mb-6 text-purple-600 transition-colors w-14 h-14 bg-purple-50 rounded-2xl group-hover:bg-purple-600 group-hover:text-white">
+                    <i class="text-2xl fas fa-wifi"></i>
+                </div>
+                <h3 class="mb-3 text-xl font-bold">يعمل بدون إنترنت</h3>
+                <p class="leading-relaxed text-slate-600">لا تقلق من انقطاع الشبكة. النظام يعمل محلياً بالكامل وبسرعة فائقة لضمان استمرار العمل.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-20 bg-slate-100">
+        <div class="px-6 mx-auto text-center max-w-7xl">
+            <h3 class="mb-12 text-sm font-bold tracking-widest uppercase text-slate-400">التقنيات المستخدمة</h3>
+            <div class="flex flex-wrap justify-center gap-10 transition-all duration-500 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <div class="flex items-center gap-2 font-bold"><i class="text-3xl text-green-500 fab fa-react"></i> <span>React 18</span></div>
+                <div class="flex items-center gap-2 font-bold"><i class="text-3xl text-green-600 fab fa-node-js"></i> <span>Electron</span></div>
+                <div class="flex items-center gap-2 font-bold"><i class="text-3xl text-green-800 fas fa-database"></i> <span>SQLite3</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-white border-t">
+        <div class="grid gap-12 px-6 mx-auto text-right max-w-7xl md:grid-cols-3">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="p-1 text-white bg-green-600 rounded">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <span class="text-xl font-black tracking-tighter text-green-900">REPARO</span>
+                </div>
+                <p class="text-slate-500">ثورة في إدارة عمليات صيانة الهواتف باستخدام أحدث تقنيات سطح المكتب.</p>
+            </div>
+            <div>
+                <h4 class="mb-6 font-bold">اللغات المدعومة</h4>
+                <ul class="space-y-2 text-slate-500">
+                    <li><i class="ml-2 text-green-500 fas fa-check"></i> العربية (دعم كامل)</li>
+                    <li><i class="ml-2 text-green-500 fas fa-check"></i> الإنجليزية</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="mb-6 font-bold ">تواصل معنا</h4>
+                <div class="flex items-center justify-start gap-4 text-center">
+                    <a target="_blank" href="https://wa.me/+966558071305" class="text-2xl transition text-slate-400 hover:text-green-600"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+            </div>
+        </div>
+        <div class="px-6 pt-8 mx-auto mt-16 text-sm font-medium text-center border-t max-w-7xl text-slate-400">
+             <a target="_blank" href="https://github.com/SHETER0" class="text-black hover:text-green-600"><i class="fab fa-github"></i></a>
+            &copy; 2024 نظام ريباريو (Reparo). مرخص بموجب MIT. | الإصدار 1.0.0
+        </div>
+        
+    </footer>
+
+</body>
+<script>
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+    const templates = [
+        "مرحباً عميلنا، تم إنشاء الفاتورة رقم #101 الخاصة بـ iPhone 13. سنبدأ العمل قريباً.",
+        "مرحباً، الفاتورة رقم #102 قيد التنفيذ حالياً. فريقنا الفني يعمل على جهازك الآن.",
+        "مرحباً، الفاتورة رقم #103 قيد الفحص حالياً. سنوافيك بالتشخيص قريباً.",
+        "تم تشخيص العطل للفاتورة رقم #104. سنوافيك بالتحديثات القادمة فوراً.",
+        "تنبيه: الفاتورة رقم #105 متوقفة مؤقتاً بانتظار وصول قطع الغيار اللازمة.",
+        "بشرى سارة! جهازك جاهز للاستلام الآن. الفاتورة رقم #106 مكتملة.",
+        "تم إكمال الإصلاح بنجاح للفاتورة رقم #107. شكراً لاختيارك خدماتنا.",
+        "نعتذر، تم إلغاء الفاتورة رقم #108. يرجى التواصل معنا للاستفسار.",
+        "تم وضع الفاتورة رقم #109 في حالة انتظار. سنتواصل معك قريباً بالتفاصيل.",
+        "تم إكمال الفاتورة رقم #110. يرجى العلم بوجود رصيد متبقي للمبلغ الإجمالي."
+    ];
+
+    const textElement = document.getElementById('template-text');
+    const badgeElement = document.getElementById('whatsapp-badge');
+
+    function changeTemplate() {
+        // إضافة تأثير اختفاء بسيط قبل تغيير النص
+        textElement.style.opacity = 0;
+        
+        setTimeout(() => {
+            // اختيار نص عشوائي
+            const randomIndex = Math.floor(Math.random() * templates.length);
+            textElement.innerText = templates[randomIndex];
+            
+            // إعادة الظهور
+            textElement.style.opacity = 1;
+            
+            // إضافة حركة خفيفة للبطاقة كاملة لجذب الانتباه
+            badgeElement.classList.add('scale-105');
+            setTimeout(() => badgeElement.classList.remove('scale-105'), 200);
+        }, 500);
+    }
+
+    // تشغيل الدالة كل 5 ثوانٍ
+    setInterval(changeTemplate, 5000);
+    
+    // تشغيل أول مرة عند تحميل الصفحة
+    window.onload = changeTemplate;
+</script>
+</html>
