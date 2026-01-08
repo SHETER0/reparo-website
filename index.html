@@ -27,7 +27,7 @@
   <meta name="description" content="ريباريو (Reparo) هو نظام متكامل لإدارة محلات صيانة الجوالات، يدعم العمل بدون إنترنت، إدارة التذاكر، والربط مع واتساب.">
   <meta name="keywords" content="برنامج صيانة جوالات, نظام إدارة محلات, ريباريو, Reparo, إدارة تذاكر صيانة, فواتير صيانة, برنامج صيانة كمبيوتر, إدارة ورشة صيانة">
 
-  <style>
+<style>
     body { 
       font-family: 'Tajawal', sans-serif;
       background: #0a0a0a;
@@ -385,9 +385,27 @@
               <i class="fas fa-ticket-alt text-3xl text-white"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">إدارة التذاكر والفواتير</h3>
-            <p class="text-gray-400 leading-relaxed">
+            <p class="text-gray-400 leading-relaxed mb-6">
               متابعة الأجهزة من الاستلام إلى التسليم مع طباعة إيصالات احترافية وإرسال إشعارات للعملاء.
             </p>
+            
+            <!-- Ticket Status Preview -->
+            <div class="mt-6 glass-effect rounded-2xl p-4 border border-green-500/30">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                    <i class="fas fa-ticket-alt text-white text-xs"></i>
+                  </div>
+                  <span class="text-xs font-bold text-green-400">حالة التذكرة</span>
+                </div>
+                <span id="ticket-status" class="text-xs font-bold px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 transition-all duration-500">
+                  قيد التنفيذ
+                </span>
+              </div>
+              <p id="ticket-text" class="text-sm text-gray-300 leading-relaxed transition-opacity duration-500">
+                فاتورة #T-1523 - iPhone 14 Pro - استبدال شاشة + بطارية
+              </p>
+            </div>
           </div>
         </div>
         
@@ -398,9 +416,27 @@
               <i class="fas fa-boxes text-3xl text-white"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">إدارة المخزون والموردين</h3>
-            <p class="text-gray-400 leading-relaxed">
+            <p class="text-gray-400 leading-relaxed mb-6">
               متابعة جميع القطع والكميات والأسعار مع التنبيه عند انخفاض المخزون وإدارة الموردين.
             </p>
+            
+            <!-- Inventory Preview -->
+            <div class="mt-6 glass-effect rounded-2xl p-4 border border-blue-500/30">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                    <i class="fas fa-box text-white text-xs"></i>
+                  </div>
+                  <span class="text-xs font-bold text-blue-400">المخزون الحالي</span>
+                </div>
+                <span id="inventory-count" class="text-xs font-bold px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 transition-all duration-500">
+                  12 قطعة
+                </span>
+              </div>
+              <p id="inventory-text" class="text-sm text-gray-300 leading-relaxed transition-opacity duration-500">
+                شاشة iPhone 13 Pro - المورد: الشركة المتحدة - السعر: 450 ر.س
+              </p>
+            </div>
           </div>
         </div>
         
@@ -411,14 +447,28 @@
               <i class="fab fa-whatsapp text-3xl text-white"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">الربط مع واتساب</h3>
-            <p class="text-gray-400 leading-relaxed">
+            <p class="text-gray-400 leading-relaxed mb-6">
               إرسال إشعارات تلقائية للعملاء عند تحديث حالة الفاتورة أو انتهاء الإصلاح.
             </p>
+            
+            <!-- WhatsApp Message Preview -->
+            <div class="mt-6 glass-effect rounded-2xl p-4 border border-green-500/30">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                  <i class="fab fa-whatsapp text-white text-sm"></i>
+                </div>
+                <span id="whatsapp-badge" class="text-xs font-bold text-green-400 transition-transform">رسالة تلقائية</span>
+              </div>
+              <p id="template-text" class="text-sm text-gray-300 leading-relaxed transition-opacity duration-500">
+                مرحباً عميلنا، تم إنشاء الفاتورة رقم #101 الخاصة بـ iPhone 13. سنبدأ العمل قريباً.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Tech Stack -->
   <section id="tech" class="relative py-32">
@@ -522,6 +572,104 @@
   </footer>
 
   <script>
+  // Ticket Management Animation
+    const tickets = [
+      { text: "فاتورة #T-1523 - iPhone 14 Pro - استبدال شاشة + بطارية", status: "قيد التنفيذ", statusColor: "yellow" },
+      { text: "فاتورة #T-1524 - Samsung S23 - إصلاح منفذ الشحن", status: "جديدة", statusColor: "green" },
+      { text: "فاتورة #T-1525 - iPad Air - تغيير زجاج الشاشة", status: "مكتملة", statusColor: "blue" },
+      { text: "فاتورة #T-1526 - iPhone 13 - مشكلة في الصوت", status: "قيد الفحص", statusColor: "purple" },
+      { text: "فاتورة #T-1527 - Xiaomi 12 - استبدال كاميرا خلفية", status: "جاهزة للتسليم", statusColor: "cyan" }
+    ];
+
+    const ticketTextElement = document.getElementById('ticket-text');
+    const ticketStatusElement = document.getElementById('ticket-status');
+
+    function changeTicket() {
+      if(!ticketTextElement) return;
+      ticketTextElement.style.opacity = '0';
+      ticketStatusElement.style.opacity = '0';
+      
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * tickets.length);
+        const ticket = tickets[randomIndex];
+        
+        ticketTextElement.innerText = ticket.text;
+        ticketStatusElement.innerText = ticket.status;
+        
+        // Update status color
+        ticketStatusElement.className = `text-xs font-bold px-3 py-1 rounded-full transition-all duration-500`;
+        ticketStatusElement.classList.add(`bg-${ticket.statusColor}-500/20`, `text-${ticket.statusColor}-400`);
+        
+        ticketTextElement.style.opacity = '1';
+        ticketStatusElement.style.opacity = '1';
+      }, 500);
+    }
+
+    // Inventory Management Animation
+    const inventoryItems = [
+      { text: "شاشة iPhone 13 Pro - المورد: الشركة المتحدة - السعر: 450 ر.س", count: "12 قطعة", color: "blue" },
+      { text: "بطارية iPhone 14 - المورد: المجموعة الدولية - السعر: 180 ر.س", count: "25 قطعة", color: "green" },
+      { text: "شاشة Samsung S23 - المورد: تك سبلاي - السعر: 520 ر.س", count: "8 قطع", color: "yellow" },
+      { text: "كاميرا Xiaomi 12 خلفية - المورد: موبايل بارتس - السعر: 320 ر.س", count: "5 قطع", color: "red" },
+      { text: "منفذ شحن iPhone 12 - المورد: الشركة المتحدة - السعر: 95 ر.س", count: "18 قطعة", color: "cyan" }
+    ];
+
+    const inventoryTextElement = document.getElementById('inventory-text');
+    const inventoryCountElement = document.getElementById('inventory-count');
+
+    function changeInventory() {
+      if(!inventoryTextElement) return;
+      inventoryTextElement.style.opacity = '0';
+      inventoryCountElement.style.opacity = '0';
+      
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * inventoryItems.length);
+        const item = inventoryItems[randomIndex];
+        
+        inventoryTextElement.innerText = item.text;
+        inventoryCountElement.innerText = item.count;
+        
+        // Update count color based on quantity
+        inventoryCountElement.className = `text-xs font-bold px-3 py-1 rounded-full transition-all duration-500`;
+        inventoryCountElement.classList.add(`bg-${item.color}-500/20`, `text-${item.color}-400`);
+        
+        inventoryTextElement.style.opacity = '1';
+        inventoryCountElement.style.opacity = '1';
+      }, 500);
+    }
+   // WhatsApp Templates Animation
+    const templates = [
+      "مرحباً عميلنا، تم إنشاء الفاتورة رقم #101 الخاصة بـ iPhone 13. سنبدأ العمل قريباً.",
+      "مرحباً، الفاتورة رقم #102 قيد التنفيذ حالياً. فريقنا الفني يعمل على جهازك الآن.",
+      "بشرى سارة! جهازك جاهز للاستلام الآن. الفاتورة رقم #106 مكتملة.",
+      "تم إكمال الإصلاح بنجاح للفاتورة رقم #107. شكراً لاختيارك خدماتنا.",
+      "تحديث: الفاتورة #103 في مرحلة الفحص النهائي. سيكون جهازك جاهزاً قريباً.",
+      "تنبيه: تم طلب قطعة غيار للفاتورة #104. سنعلمك فور وصولها."
+    ];
+    const textElement = document.getElementById('template-text');
+    const badgeElement = document.getElementById('whatsapp-badge');
+
+
+    function changeTemplate() {
+      if(!textElement) return;
+      textElement.style.opacity = '0';
+      setTimeout(() => {
+        const randomIndex = Math.floor(Math.random() * templates.length);
+        textElement.innerText = templates[randomIndex];
+        textElement.style.opacity = '1';
+        badgeElement.classList.add('scale-110');
+        setTimeout(() => badgeElement.classList.remove('scale-110'), 200);
+      }, 500);
+    }
+
+    // Start all animations with different intervals
+    setInterval(changeTicket, 4500);
+    setInterval(changeInventory, 5000);
+    setInterval(changeTemplate, 4000);
+    
+    setTimeout(changeTicket, 1000);
+    setTimeout(changeInventory, 1500);
+    setTimeout(changeTemplate, 2000);
     // Testimonial Swiper
     const testimonialSwiper = new Swiper(".testimonialSwiper", {
       loop: true,
