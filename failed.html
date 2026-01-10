@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فشل الدفع - Reparo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+        
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            background-color: #000;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ff4d4d 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-[10%] -right-[10%] w-[40%] h-[40%] bg-red-900/20 rounded-full blur-[120px]"></div>
+        <div class="absolute -bottom-[10%] -left-[10%] w-[40%] h-[40%] bg-orange-900/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-md w-full glass-effect rounded-[2.5rem] p-10 text-center glow-red">
+        <div class="relative w-24 h-24 mx-auto mb-8">
+            <div class="absolute inset-0 bg-red-500 blur-2xl opacity-20 animate-pulse"></div>
+            <div class="relative w-24 h-24 bg-gradient-to-br from-red-500 to-orange-600 rounded-3xl flex items-center justify-center shadow-lg transform rotate-12">
+                <i class="fas fa-times text-white text-4xl -rotate-12"></i>
+            </div>
+        </div>
+
+        <h1 class="text-3xl font-black text-white mb-4 italic">
+            عذراً، <span class="gradient-text">فشل الدفع</span>
+        </h1>
+        
+        <p id="error-message" class="text-gray-400 mb-10 leading-relaxed bg-white/5 p-4 rounded-2xl border border-white/5">
+            حدث خطأ غير متوقع أثناء معالجة العملية.
+        </p>
+        
+        <div class="space-y-4">
+            <button onclick="window.history.back()" 
+                    class="w-full py-4 bg-white text-black rounded-2xl font-black transition-all duration-300 hover:scale-[1.02] hover:bg-red-500 hover:text-white shadow-xl">
+                المحاولة مرة أخرى
+            </button>
+            
+            <a href="index.html" 
+               class="block py-4 text-gray-500 text-sm font-bold hover:text-white transition-colors">
+                <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                العودة للرئيسية
+            </a>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-white/5 text-[10px] text-gray-600 uppercase tracking-widest">
+            إذا استمرت المشكلة، يرجى التواصل مع الدعم الفني لـ Reparo
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const reason = params.get('reason');
+        if (reason) {
+            const errors = {
+                'DECLINED: INVALID CARD OR NOT FOUND': 'بيانات البطاقة غير صحيحة، يرجى التأكد من الرقم وتاريخ الانتهاء.',
+                'INSUFFICIENT_FUNDS': 'عذراً، الرصيد في بطاقتك لا يكفي لإتمام عملية الاشتراك.',
+                '3-D Secure interaction timed out': 'انتهت مهلة التحقق الأمني (3D Secure). يرجى المحاولة بشكل أسرع.'
+            };
+            document.getElementById('error-message').innerText = errors[reason] || reason;
+        }
+    </script>
+</body>
+</html>
