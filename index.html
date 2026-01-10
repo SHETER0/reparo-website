@@ -8,7 +8,8 @@
   <meta property="og:title" content="ريباريو (Reparo) | نظام إدارة صيانة الجوالات">
   <meta property="og:description" content="حول محلك إلى مركز صيانة احترافي مع نظام ريباريو المتكامل.">
   <meta property="og:image" content="https://sheter0.github.io/reparo-website/images/reparo.ico">
-  
+  <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.13.0/moyasar.css" />
+<script src="https://cdn.moyasar.com/mpf/1.13.0/moyasar.js"></script>
   <title>ريباريو (Reparo) | نظام إدارة محلات صيانة الجوالات الذكي</title>
   <link rel="icon" type="image/x-icon" href="images/reparo.ico">
   <link rel="apple-touch-icon" href="images/reparo.ico">
@@ -75,7 +76,7 @@
     .shimmer {
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
       background-size: 200% 100%;
-      animation: shimmer 3s infinite;
+      animation: shimmer 10s 1;
     }
     
     @keyframes shimmer {
@@ -377,7 +378,7 @@
         </h2>
       </div>
       
-      <div class="grid lg:grid-cols-3 gap-8">
+      <div class="grid lg:grid-cols-4 gap-8">
         <div class="glass-effect p-10 rounded-3xl card-hover group relative overflow-hidden">
           <div class="shimmer absolute inset-0"></div>
           <div class="relative z-10">
@@ -439,7 +440,41 @@
             </div>
           </div>
         </div>
-        
+        <div class="glass-effect p-10 rounded-3xl card-hover group relative overflow-hidden">
+          <div class="shimmer absolute inset-0" style="animation-delay: 1.5s;"></div>
+          <div class="relative z-10">
+            <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform glow-green" style="--glow-color: rgba(249, 115, 22, 0.5)">
+              <i class="fas fa-users text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">إدارة وحسابات العملاء</h3>
+            <p class="text-gray-400 leading-relaxed mb-6">
+              سجل كامل لكل عميل يشمل مديونياته، إجمالي مدفوعاته، وتاريخ آخر زيارة لتعزيز الولاء.
+            </p>
+            
+            <div class="mt-6 glass-effect rounded-2xl p-4 border border-orange-500/30">
+              <div class="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center border border-white/10">
+                    <i class="fas fa-user text-orange-400 text-xs"></i>
+                  </div>
+                  <span class="text-[10px] font-bold text-gray-200">أحمد محمد</span>
+                </div>
+                <span class="text-[9px] text-gray-500 font-mono">آخر زيارة: منذ يومين</span>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-black/40 p-2 rounded-xl border border-white/5">
+                  <p class="text-[9px] text-gray-500 mb-1">إجمالي المدفوعات</p>
+                  <p class="text-xs font-bold text-green-400">2,450 ر.س</p>
+                </div>
+                <div class="bg-red-500/5 p-2 rounded-xl border border-red-500/20">
+                  <p class="text-[9px] text-red-400/60 mb-1">الديون المستحقة</p>
+                  <p class="text-xs font-bold text-red-500">180 ر.س</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="glass-effect p-10 rounded-3xl card-hover group relative overflow-hidden">
           <div class="shimmer absolute inset-0" style="animation-delay: 2s;"></div>
           <div class="relative z-10">
@@ -469,61 +504,153 @@
     </div>
   </section>
 
+<section id="ticket-flow" class="relative py-24 bg-black overflow-hidden">
+  <div class="relative z-10 px-6 mx-auto max-w-5xl">
+    <div class="text-center mb-20">
+      <span class="text-green-400 font-bold text-sm tracking-wider uppercase mb-4 block">سير العمل الذكي</span>
+      <h2 class="text-3xl lg:text-5xl font-black mb-4">دورة حياة التذكرة في <span class="gradient-text">Reparo</span></h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">نظام مؤتمت بالكامل يرافقك من دخول العميل وحتى احتساب أرباحك الصافية.</p>
+    </div>
 
-  <!-- Tech Stack -->
-  <section id="tech" class="relative py-32">
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-gray-950"></div>
-    
-    <div class="relative z-10 px-6 mx-auto text-center max-w-7xl">
-      <span class="text-green-400 font-bold text-sm tracking-wider uppercase mb-8 block">التقنيات المستخدمة</span>
-      <h3 class="text-3xl font-bold mb-16 text-gray-300">مبني على أحدث التقنيات</h3>
-      
-      <div class="flex flex-wrap justify-center gap-12">
-        <div class="group">
-          <div class="glass-effect w-24 h-24 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <i class="fab fa-react text-5xl text-cyan-400"></i>
-          </div>
-          <p class="font-bold text-gray-400">React 18</p>
+    <div class="relative">
+      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-green-500/50 via-cyan-500/50 to-transparent"></div>
+
+      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+          <h4 class="text-xl font-bold text-green-400 mb-2">01. إنشاء التذكرة والتوثيق</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">تسجيل بيانات العميل، حالة الجهاز، والخلل الفني مع طباعة إيصال استلام احترافي فوراً.</p>
         </div>
-        
-        <div class="group">
-          <div class="glass-effect w-24 h-24 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <i class="fab fa-node-js text-5xl text-green-400"></i>
-          </div>
-          <p class="font-bold text-gray-400">Electron</p>
+        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-green-500 glow-green border-4 border-black order-1 md:order-2">
+          <i class="fas fa-plus text-white text-xl"></i>
         </div>
-        
-        <div class="group">
-          <div class="glass-effect w-24 h-24 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <i class="fas fa-database text-5xl text-blue-400"></i>
+        <div class="flex-1 md:pl-12 order-3">
+          <div class="glass-effect p-4 rounded-2xl border border-white/5 opacity-60 scale-95">
+             <div class="flex justify-between text-[10px] mb-2 font-mono"><span>#T-1523</span><span class="text-green-400">جديد</span></div>
+             <div class="h-2 w-full bg-gray-800 rounded-full overflow-hidden"><div class="bg-green-500 h-full w-1/4"></div></div>
           </div>
-          <p class="font-bold text-gray-400">SQLite3</p>
         </div>
       </div>
-    </div>
-  </section>
 
+      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1 md:text-right md:pr-12 order-3 md:order-1">
+          <div class="glass-effect p-4 rounded-2xl border border-cyan-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fab fa-whatsapp text-green-400"></i>
+              <span class="text-[10px] font-bold text-cyan-400">رسالة ترحيب تلقائية</span>
+            </div>
+            <div class="text-[10px] text-gray-500 font-mono leading-tight">"عزيزي العميل، تم استلام جهازك بنجاح بموجب التذكرة رقم #1523..."</div>
+          </div>
+        </div>
+        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-cyan-500 glow-green border-4 border-black order-1 md:order-2">
+          <i class="fas fa-robot text-white text-xl"></i>
+        </div>
+        <div class="flex-1 md:text-right md:pl-12 mb-6 md:mb-0 order-2 md:order-3">
+          <h4 class="text-xl font-bold text-cyan-400 mb-2">02. إشعار العميل عبر واتساب</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">بمجرد الحفظ، يرسل النظام رسالة واتساب للعميل تحتوي على تفاصيل التذكرة ورابط تتبع الحالة مباشرة.</p>
+        </div>
+      </div>
+
+      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+          <h4 class="text-xl font-bold text-yellow-400 mb-2">03. ربط قطع الغيار</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">تخصيص القطع من المخزون للتذكرة، مما يقوم بتحديث الكميات تلقائياً وتجهيز التكلفة المالية.</p>
+        </div>
+        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-yellow-500 glow-green border-4 border-black order-1 md:order-2">
+          <i class="fas fa-microchip text-white text-xl"></i>
+        </div>
+        <div class="flex-1 md:pl-12 order-3">
+          <div class="glass-effect p-4 rounded-2xl border border-white/5 opacity-60">
+             <div class="text-[10px] flex justify-between font-bold"><span>شاشة iPhone 14</span><span class="text-red-400">-1 قطعة</span></div>
+             <div class="mt-2 text-[9px] text-gray-500 italic">تم خصمها من المخزون الرئيسي</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1 md:text-right md:pr-12 order-3 md:order-1">
+          <div class="glass-effect p-3 rounded-2xl border border-emerald-500/30 relative">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+              <span class="text-[10px] font-bold text-emerald-400">إشعار الجاهزية</span>
+            </div>
+            <div class="bg-black/40 p-2 rounded-lg border border-white/5">
+               <p class="text-[9px] text-gray-300 leading-tight">
+                 "جهازك أصبح جاهزاً للاستلام الآن في الفرع. بانتظار زيارتك!"
+               </p>
+            </div>
+            <i class="fab fa-whatsapp absolute -bottom-2 -right-2 text-xl text-green-500"></i>
+          </div>
+        </div>
+        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 glow-green border-4 border-black order-1 md:order-2">
+          <i class="fas fa-bell text-white text-xl"></i>
+        </div>
+        <div class="flex-1 md:text-right md:pl-12 mb-6 md:mb-0 order-2 md:order-3">
+          <h4 class="text-xl font-bold text-emerald-400 mb-2">04. إشعار الجاهزية</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">بمجرد انتهاء الفني، يتم تغيير الحالة إلى "جاهز". يقوم النظام فوراً بإرسال إشعار للعميل يخبره بأن جهازه بانتظاره.</p>
+        </div>
+      </div>
+
+      <div class="relative flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+          <h4 class="text-xl font-bold text-white mb-2">05. بعد التسليم</h4>
+          <p class="text-gray-400 text-sm leading-relaxed">عند إغلاق التذكرة، يتم احتساب التكاليف والأرباح بدقة متناهية وترحيلها للتقارير.</p>
+          <ul class="text-right text-[12px] text-gray-500 mt-3 space-y-1">
+            <li><i class="fas fa-check text-green-500 ml-1"></i> إرسال الفاتورة النهائية PDF للعميل.</li>
+            <li><i class="fas fa-check text-green-500 ml-1"></i> ترحيل الأرباح لتقرير المبيعات اليومي.</li>
+          </ul>
+        </div>
+        <div class="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-cyan-600 glow-green border-4 border-black order-1 md:order-2">
+          <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+        </div>
+        <div class="flex-1 md:pl-12 order-3">
+          <div class="glass-effect p-5 rounded-2xl border border-green-500/40 relative overflow-hidden group shadow-2xl">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-cyan-500"></div>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-[10px] text-gray-400">إجمالي الفاتورة:</span>
+                <span class="text-sm font-bold text-white">450 ر.س</span>
+              </div>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-xs font-bold text-green-400">صافي الربح:</span>
+                <span class="text-xs font-black bg-green-500/20 px-2 py-0.5 rounded text-green-400">+ 230 ر.س</span>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center gap-2 bg-green-500/10 p-2 rounded-xl border border-green-500/20">
+              <i class="fas fa-file-pdf text-red-500 text-xs"></i>
+              <span class="text-[9px] text-gray-300">تم إرسال الفاتورة عبر واتساب</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="mysr-form"></div>
   <!-- CTA Section -->
-  <section class="relative py-32 overflow-hidden">
-    <div class="absolute inset-0 mesh-gradient"></div>
-    <div class="absolute inset-0 spotlight"></div>
-    
-    <div class="relative z-10 px-6 mx-auto text-center max-w-4xl">
-      <h2 class="text-5xl lg:text-6xl font-black mb-8">
-        جاهز لتطوير
-        <span class="gradient-text">عملك؟</span>
-      </h2>
-      <p class="text-xl text-gray-400 mb-12">
-        انضم إلى مئات مراكز الصيانة التي تستخدم Reparo لإدارة أعمالها
-      </p>
-      <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" 
-         class="inline-flex items-center gap-3 px-10 py-5 text-xl font-bold bg-white text-black rounded-2xl hover:bg-gradient-to-r hover:from-green-400 hover:to-cyan-400 transition-all hover:scale-105 premium-shadow">
-        ابدأ تجربتك المجانية الآن
-        <i class="fas fa-arrow-left"></i>
-      </a>
+<section id="pricing-section" class="py-20 bg-black text-white" dir="rtl">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">خطط الأسعار</h2>
+      <div class="flex justify-center items-center gap-4">
+        <span>شهري</span>
+        <button id="billing-toggle" class="w-14 h-7 bg-green-500 rounded-full relative transition-all">
+          <div id="toggle-circle" class="w-5 h-5 bg-white rounded-full absolute top-1 right-1 transition-all"></div>
+        </button>
+        <span>سنوي (خصم 15%)</span>
+      </div>
     </div>
-  </section>
 
+    <div id="plans-container" class="grid lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+<div class="mt-8 flex justify-center items-center gap-6 opacity-80 pb-12">
+<img src="https://moyasar.com/images/about/mada-artwork.svg" alt="Mada" class="h-6">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-8 w-auto">
+  
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" class="h-8 w-auto">
+</div>
   <!-- Footer -->
   <footer class="relative border-t border-gray-800 py-16">
     <div class="absolute inset-0 bg-gradient-to-b from-gray-950 to-black"></div>
@@ -572,6 +699,126 @@
   </footer>
 
   <script>
+
+
+
+let isYearly = false; 
+
+const plansData = [
+    {
+      "id": "standard",
+      "name": "معياري",
+      "price_monthly": 49,
+      "price_yearly": 499,
+      "old_price_yearly": 588, // 49 * 12 = 588
+      "features": ["500 فاتورة صيانة","500 عميل","500 قطعة بالمخزون ", "مخزون متقدم وتنبيهات", "تصدير واستيراد البيانات", "تقارير وتحليلات", "دعم فني 24/7"],
+      "not_included": ["إشعارات واتساب", "ادراة الموردين المتقدمة", "التقارير المتقدمة"],
+      "button_text": "اشترك في المعياري",
+      "popular": false
+    },
+
+    {
+      "id": "premium",
+      "name": "مميز",
+      "price_monthly": 89,
+      "price_yearly": 899,
+      "old_price_yearly": 1068, // 89 * 12 = 1068
+      "features": ["فواتير صيانة غير محدودة", "عميل غير محدود", "قطع غير محدودة بالمخزون", "مخزون متقدم وتنبيهات", "تصدير واستيراد البيانات", "تقارير وتحليلات", "دعم فني 24/7", "إشعارات واتساب", "ادراة الموردين المتقدمة", "التقارير المتقدمة"],
+      "not_included": [],
+      "button_text": "اشترك في المميز",
+      "popular": true
+    },
+    {
+      "id": "custom",
+      "name": "مخصص",
+      "price_monthly": "-",
+      "price_yearly": "-",
+      "old_price_yearly": "-", // 89 * 12 = 1068
+      "features": ["حلول مخصصة حسب احتياجاتك", "دعم فني مخصص", "تدريب فريق العمل", "تكامل مع أنظمتك الحالية"],
+      "not_included": [],
+      "button_text": " اطلب عرض مخصص",
+      "popular": false
+    }
+];
+function renderPlans() {
+  const container = document.getElementById('plans-container');
+  container.innerHTML = ''; 
+
+  plansData.forEach(plan => {
+    const price = isYearly ? plan.price_yearly : plan.price_monthly;
+    const oldPrice = isYearly ? plan.old_price_yearly : null;
+    const period = isYearly ? '/ سنوياً' : '/ شهرياً';
+    
+    const card = `
+      <div class="glass-effect p-8 rounded-3xl border ${plan.popular ? 'border-green-500 scale-105 z-10' : 'border-gray-800'} relative flex flex-col h-full">
+        ${plan.popular ? '<span class="absolute -top-4 right-1/2 translate-x-1/2 bg-green-500 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">الأكثر طلباً</span>' : ''}
+        
+        <h3 class="text-2xl font-bold mb-4">${plan.name} </h3>
+        
+        <div class="mb-6 h-16">
+          ${oldPrice && oldPrice > price ? `<span class="text-gray-500 line-through text-sm block">${oldPrice} ر.س</span>` : '<span class="h-5 block"></span>'}
+          <span class="text-4xl font-black">${price} ${isYearly && Math.round(((oldPrice - price) / oldPrice) * 100) > 0 ? 
+          `<span class="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded ml-2 italic">وفر ${Math.round(((oldPrice - price) / oldPrice) * 100)}%</span>` 
+            : ''}</span>
+          <span class="text-gray-400 text-xs font-medium">ر.س ${period}</span>
+        </div>
+        
+        <ul class="space-y-4 mb-8 flex-grow">
+          ${plan.features.map(f => `
+          
+            <li class="flex items-center text-sm text-gray-200">
+              <i class="fas fa-check-circle text-green-500 ml-3 text-base"></i>
+              ${f}
+            </li>
+          `).join('')}
+          
+          ${plan.not_included.map(nf => `
+            <li class="flex items-center text-sm text-gray-500 italic">
+              <i class="fas fa-times-circle text-red-500/50 ml-3 text-base"></i>
+              ${nf}
+            </li>
+          `).join('')}
+        </ul>
+        
+    <button disabled 
+            onclick="handlePayment('${plan.id}', ${price}, 'Test@gmail.com')" 
+            class="w-full py-4 rounded-2xl font-black transition-all duration-300 
+            disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-800 disabled:text-gray-500 disabled:shadow-none disabled:hover:scale-100
+            /* Original Classes */
+            ${plan.popular ? 'bg-green-500 text-black shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.02]' : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'}">
+      ${plan.button_text}
+    </button>
+      </div>
+    `;
+    container.innerHTML += card;
+  });
+}
+//  Toggle Logic
+document.getElementById('billing-toggle').addEventListener('click', () => {
+  isYearly = !isYearly;
+  const circle = document.getElementById('toggle-circle');
+  circle.style.transform = isYearly ? 'translateX(-28px)' : 'translateX(0)';
+  renderPlans();
+});
+
+
+renderPlans();
+//  TODO: Handle Payment (Moyasar Integration)
+function handlePayment(planId, price, userEmail) {
+
+  Moyasar.init({
+    element: '.mysr-form',
+    amount: price * 100,
+    currency: 'SAR',
+    description: `Reparo Subscription: ${planId}`,
+    publishable_api_key: 'pk_test_zWUjxWzEnnqMMdTonfzBjsKdRjvqZ1Equves1kmo',
+    methods: ['creditcard'],
+    language: 'ar',
+    callback_url: `http://-Server-HERE-/api/verify?planId=${planId}&email=${userEmail}`
+  });
+}
+
+
   // Ticket Management Animation
     const tickets = [
       { text: "فاتورة #T-1523 - iPhone 14 Pro - استبدال شاشة + بطارية", status: "قيد التنفيذ", statusColor: "yellow" },
