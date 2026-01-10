@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,17 @@
   <meta property="og:description" content="حول محلك إلى مركز صيانة احترافي مع نظام ريباريو المتكامل.">
   <meta property="og:image" content="https://sheter0.github.io/reparo-website/images/reparo.ico">
   <link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.13.0/moyasar.css" />
-<script src="https://cdn.moyasar.com/mpf/1.13.0/moyasar.js"></script>
+  <script src="https://cdn.moyasar.com/mpf/1.13.0/moyasar.js"></script>
   <title>ريباريو (Reparo) | نظام إدارة محلات صيانة الجوالات الذكي</title>
   <link rel="icon" type="image/x-icon" href="images/reparo.ico">
   <link rel="apple-touch-icon" href="images/reparo.ico">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2M14VP4BR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
     gtag('config', 'G-F2M14VP4BR');
   </script>
@@ -28,75 +32,94 @@
   <meta name="description" content="ريباريو (Reparo) هو نظام متكامل لإدارة محلات صيانة الجوالات، يدعم العمل بدون إنترنت، إدارة التذاكر، والربط مع واتساب.">
   <meta name="keywords" content="برنامج صيانة جوالات, نظام إدارة محلات, ريباريو, Reparo, إدارة تذاكر صيانة, فواتير صيانة, برنامج صيانة كمبيوتر, إدارة ورشة صيانة">
 
-<style>
-    body { 
+  <style>
+    body {
       font-family: 'Tajawal', sans-serif;
       background: #0a0a0a;
     }
-    
+
     .gradient-text {
       background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .premium-gradient {
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
     }
-    
+
     .glass-effect {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .glow-green {
       box-shadow: 0 0 40px rgba(16, 185, 129, 0.3), 0 0 80px rgba(16, 185, 129, 0.1);
     }
-    
+
     .floating {
       animation: floating 6s ease-in-out infinite;
     }
-    
+
     @keyframes floating {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
-    
+
     .fade-in {
       animation: fadeIn 1s ease-in;
     }
-    
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    
+
     .shimmer {
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       background-size: 200% 100%;
       animation: shimmer 10s 1;
     }
-    
+
     @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
+      0% {
+        background-position: -200% 0;
+      }
+
+      100% {
+        background-position: 200% 0;
+      }
     }
-    
+
     .mesh-gradient {
-      background: 
+      background:
         radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
         radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
         radial-gradient(at 0% 100%, rgba(6, 182, 212, 0.15) 0px, transparent 50%);
     }
-    
+
     .spotlight {
       position: relative;
       overflow: hidden;
     }
-    
+
     .spotlight::before {
       content: '';
       position: absolute;
@@ -107,42 +130,55 @@
       background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
       animation: spotlight-move 10s ease-in-out infinite;
     }
-    
+
     @keyframes spotlight-move {
-      0%, 100% { transform: translate(0, 0); }
-      25% { transform: translate(30%, 30%); }
-      50% { transform: translate(-30%, 30%); }
-      75% { transform: translate(30%, -30%); }
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      25% {
+        transform: translate(30%, 30%);
+      }
+
+      50% {
+        transform: translate(-30%, 30%);
+      }
+
+      75% {
+        transform: translate(30%, -30%);
+      }
     }
-    
+
     .card-hover {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     .card-hover:hover {
       transform: translateY(-8px);
     }
-    
+
     .swiper-pagination-bullet {
       background: rgba(255, 255, 255, 0.3) !important;
       width: 12px !important;
       height: 12px !important;
     }
-    
+
     .swiper-pagination-bullet-active {
       background: linear-gradient(135deg, #10b981, #34d399) !important;
       width: 40px !important;
       border-radius: 6px !important;
     }
-    
+
     .premium-shadow {
       box-shadow: 0 20px 60px -15px rgba(16, 185, 129, 0.3);
     }
-    
+
     nav {
       transition: all 0.3s ease;
     }
-    
+
     .nav-scrolled {
       background: rgba(10, 10, 10, 0.8) !important;
       backdrop-filter: blur(20px);
@@ -167,8 +203,7 @@
         <a href="#trust" class="transition hover:text-green-400">بناء الثقة</a>
         <a href="#tech" class="transition hover:text-green-400">التقنيات</a>
       </div>
-      <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" 
-         class="px-6 py-3 font-bold text-black transition-all bg-gradient-to-r from-green-400 to-cyan-400 rounded-full hover:shadow-lg hover:shadow-green-500/50 hover:scale-105">
+      <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" class="px-6 py-3 font-bold text-black transition-all bg-gradient-to-r from-green-400 to-cyan-400 rounded-full hover:shadow-lg hover:shadow-green-500/50 hover:scale-105">
         جرب الشهر المجاني
       </a>
     </div>
@@ -177,11 +212,11 @@
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center mesh-gradient overflow-hidden">
     <div class="absolute inset-0 spotlight"></div>
-    
+
     <!-- Animated Background Elements -->
     <div class="absolute top-20 right-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl floating"></div>
     <div class="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl floating" style="animation-delay: -3s;"></div>
-    
+
     <div class="relative z-10 grid items-center gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-2 pt-32 pb-20">
       <div class="fade-in">
         <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 glass-effect rounded-full">
@@ -191,26 +226,25 @@
           </span>
           <span class="text-sm font-bold text-green-400">نظام إدارة من الجيل القادم</span>
         </div>
-        
+
         <h1 class="text-5xl font-black leading-tight lg:text-7xl mb-6">
           حول محلك إلى
           <span class="gradient-text block mt-2">مركز صيانة احترافي</span>
         </h1>
-        
+
         <p class="text-xl leading-relaxed text-gray-400 mb-10 max-w-xl">
-          إدارة التذاكر، المخزون، العملاء، الموردين، وإرسال إشعارات الواتساب. 
+          إدارة التذاكر، المخزون، العملاء، الموردين، وإرسال إشعارات الواتساب.
           <span class="text-green-400 font-bold">كل ذلك يعمل بدون إنترنت</span> لضمان استمرار العمل.
         </p>
-        
+
         <div class="flex flex-wrap gap-4 mb-12">
-          <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" 
-             class="group px-8 py-4 text-lg font-bold bg-white text-black rounded-2xl hover:bg-gradient-to-r hover:from-green-400 hover:to-cyan-400 transition-all hover:scale-105 premium-shadow flex items-center gap-3">
+          <a target="_blank" href="https://github.com/SHETER0/reparo-releases/releases/download/v1.0.9/Reparo-Setup-1.0.9.exe" class="group px-8 py-4 text-lg font-bold bg-white text-black rounded-2xl hover:bg-gradient-to-r hover:from-green-400 hover:to-cyan-400 transition-all hover:scale-105 premium-shadow flex items-center gap-3">
             ابدأ الآن مجاناً
             <i class="fas fa-arrow-left group-hover:translate-x-1 transition-transform"></i>
           </a>
 
         </div>
-        
+
         <div class="flex items-center gap-6 text-gray-400">
           <div class="flex items-center gap-2">
             <i class="text-2xl fab fa-windows text-green-400"></i>
@@ -226,7 +260,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="relative fade-in" style="animation-delay: 0.2s;">
         <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-cyan-500 rounded-3xl blur-3xl opacity-20"></div>
         <div class="relative glass-effect p-6 rounded-3xl premium-shadow">
@@ -269,7 +303,7 @@
   <section id="trust" class="relative py-32 overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black"></div>
     <div class="absolute top-0 left-1/2 w-full h-px bg-gradient-to-r from-transparent via-green-500 to-transparent"></div>
-    
+
     <div class="relative z-10 px-6 mx-auto max-w-7xl">
       <div class="text-center mb-20">
         <span class="text-green-400 font-bold text-sm tracking-wider uppercase mb-4 block">بناء الثقة</span>
@@ -281,7 +315,7 @@
           نظام متكامل يضمن احترافية التعامل وشفافية العمل
         </p>
       </div>
-      
+
       <div class="grid lg:grid-cols-3 gap-8 mb-20">
         <div class="glass-effect p-8 rounded-3xl card-hover group">
           <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -292,7 +326,7 @@
             تخلص من الملاحظات الورقية. الفواتير الرقمية والرسائل المنظمة تعطي انطباعاً بأنك مركز صيانة معتمد وضخم.
           </p>
         </div>
-        
+
         <div class="glass-effect p-8 rounded-3xl card-hover group">
           <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <i class="fas fa-eye text-2xl text-white"></i>
@@ -302,7 +336,7 @@
             إمكانية تتبع حالة الإصلاح فورياً تزيد من طمأنينة العميل وتجعله يثق بجودة عملك ومصداقية محلك.
           </p>
         </div>
-        
+
         <div class="glass-effect p-8 rounded-3xl card-hover group">
           <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <i class="fas fa-shield-alt text-2xl text-white"></i>
@@ -313,7 +347,7 @@
           </p>
         </div>
       </div>
-      
+
       <!-- Testimonials -->
       <div class="max-w-4xl mx-auto">
         <div class="glass-effect rounded-3xl p-12 premium-shadow">
@@ -327,7 +361,7 @@
               <i class="fas fa-star"></i>
             </div>
           </div>
-          
+
           <div class="swiper testimonialSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide text-center px-8">
@@ -343,7 +377,7 @@
                   <p class="text-gray-500">مدير المخزون</p>
                 </div>
               </div>
-              
+
               <div class="swiper-slide text-center px-8">
                 <i class="fas fa-quote-right text-5xl text-green-500/20 mb-6"></i>
                 <p class="text-xl leading-relaxed text-gray-300 mb-8">
@@ -368,7 +402,7 @@
   <!-- Features Section -->
   <section id="features" class="relative py-32">
     <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black"></div>
-    
+
     <div class="relative z-10 px-6 mx-auto max-w-7xl">
       <div class="text-center mb-20">
         <span class="text-green-400 font-bold text-sm tracking-wider uppercase mb-4 block">المميزات</span>
@@ -377,7 +411,7 @@
           <span class="gradient-text">مكان واحد</span>
         </h2>
       </div>
-      
+
       <div class="grid lg:grid-cols-4 gap-8">
         <div class="glass-effect p-10 rounded-3xl card-hover group relative overflow-hidden">
           <div class="shimmer absolute inset-0"></div>
@@ -389,7 +423,7 @@
             <p class="text-gray-400 leading-relaxed mb-6">
               متابعة الأجهزة من الاستلام إلى التسليم مع طباعة إيصالات احترافية وإرسال إشعارات للعملاء.
             </p>
-            
+
             <!-- Ticket Status Preview -->
             <div class="mt-6 glass-effect rounded-2xl p-4 border border-green-500/30">
               <div class="flex items-center justify-between mb-3">
@@ -409,7 +443,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="glass-effect p-10 rounded-3xl card-hover group relative overflow-hidden">
           <div class="shimmer absolute inset-0" style="animation-delay: 1s;"></div>
           <div class="relative z-10">
@@ -420,7 +454,7 @@
             <p class="text-gray-400 leading-relaxed mb-6">
               متابعة جميع القطع والكميات والأسعار مع التنبيه عند انخفاض المخزون وإدارة الموردين.
             </p>
-            
+
             <!-- Inventory Preview -->
             <div class="mt-6 glass-effect rounded-2xl p-4 border border-blue-500/30">
               <div class="flex items-center justify-between mb-3">
@@ -450,7 +484,7 @@
             <p class="text-gray-400 leading-relaxed mb-6">
               سجل كامل لكل عميل يشمل مديونياته، إجمالي مدفوعاته، وتاريخ آخر زيارة لتعزيز الولاء.
             </p>
-            
+
             <div class="mt-6 glass-effect rounded-2xl p-4 border border-orange-500/30">
               <div class="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
                 <div class="flex items-center gap-2">
@@ -461,7 +495,7 @@
                 </div>
                 <span class="text-[9px] text-gray-500 font-mono">آخر زيارة: منذ يومين</span>
               </div>
-              
+
               <div class="grid grid-cols-2 gap-3">
                 <div class="bg-black/40 p-2 rounded-xl border border-white/5">
                   <p class="text-[9px] text-gray-500 mb-1">إجمالي المدفوعات</p>
@@ -485,7 +519,7 @@
             <p class="text-gray-400 leading-relaxed mb-6">
               إرسال إشعارات تلقائية للعملاء عند تحديث حالة الفاتورة أو انتهاء الإصلاح.
             </p>
-            
+
             <!-- WhatsApp Message Preview -->
             <div class="mt-6 glass-effect rounded-2xl p-4 border border-green-500/30">
               <div class="flex items-center gap-2 mb-3">
@@ -504,157 +538,159 @@
     </div>
   </section>
 
-<section id="ticket-flow" class="relative py-24 bg-black overflow-hidden">
-  <div class="relative z-10 px-6 mx-auto max-w-5xl">
-    <div class="text-center mb-20">
-      <span class="text-green-400 font-bold text-sm tracking-wider uppercase mb-4 block">سير العمل الذكي</span>
-      <h2 class="text-3xl lg:text-5xl font-black mb-4">دورة حياة التذكرة في <span class="gradient-text">Reparo</span></h2>
-      <p class="text-gray-400 max-w-2xl mx-auto">نظام مؤتمت بالكامل يرافقك من دخول العميل وحتى احتساب أرباحك الصافية.</p>
-    </div>
-
-    <div class="relative">
-      <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-green-500/50 via-cyan-500/50 to-transparent"></div>
-
-      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
-        <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
-          <h4 class="text-xl font-bold text-green-400 mb-2">01. إنشاء التذكرة والتوثيق</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">تسجيل بيانات العميل، حالة الجهاز، والخلل الفني مع طباعة إيصال استلام احترافي فوراً.</p>
-        </div>
-        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-green-500 glow-green border-4 border-black order-1 md:order-2">
-          <i class="fas fa-plus text-white text-xl"></i>
-        </div>
-        <div class="flex-1 md:pl-12 order-3">
-          <div class="glass-effect p-4 rounded-2xl border border-white/5 opacity-60 scale-95">
-             <div class="flex justify-between text-[10px] mb-2 font-mono"><span>#T-1523</span><span class="text-green-400">جديد</span></div>
-             <div class="h-2 w-full bg-gray-800 rounded-full overflow-hidden"><div class="bg-green-500 h-full w-1/4"></div></div>
-          </div>
-        </div>
+  <section id="ticket-flow" class="relative py-24 bg-black overflow-hidden">
+    <div class="relative z-10 px-6 mx-auto max-w-5xl">
+      <div class="text-center mb-20">
+        <span class="text-green-400 font-bold text-sm tracking-wider uppercase mb-4 block">سير العمل الذكي</span>
+        <h2 class="text-3xl lg:text-5xl font-black mb-4">دورة حياة التذكرة في <span class="gradient-text">Reparo</span></h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">نظام مؤتمت بالكامل يرافقك من دخول العميل وحتى احتساب أرباحك الصافية.</p>
       </div>
 
-      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
-        <div class="flex-1 md:text-right md:pr-12 order-3 md:order-1">
-          <div class="glass-effect p-4 rounded-2xl border border-cyan-500/30">
-            <div class="flex items-center gap-2 mb-2">
-              <i class="fab fa-whatsapp text-green-400"></i>
-              <span class="text-[10px] font-bold text-cyan-400">رسالة ترحيب تلقائية</span>
-            </div>
-            <div class="text-[10px] text-gray-500 font-mono leading-tight">"عزيزي العميل، تم استلام جهازك بنجاح بموجب التذكرة رقم #1523..."</div>
-          </div>
-        </div>
-        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-cyan-500 glow-green border-4 border-black order-1 md:order-2">
-          <i class="fas fa-robot text-white text-xl"></i>
-        </div>
-        <div class="flex-1 md:text-right md:pl-12 mb-6 md:mb-0 order-2 md:order-3">
-          <h4 class="text-xl font-bold text-cyan-400 mb-2">02. إشعار العميل عبر واتساب</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">بمجرد الحفظ، يرسل النظام رسالة واتساب للعميل تحتوي على تفاصيل التذكرة ورابط تتبع الحالة مباشرة.</p>
-        </div>
-      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-green-500/50 via-cyan-500/50 to-transparent"></div>
 
-      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
-        <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
-          <h4 class="text-xl font-bold text-yellow-400 mb-2">03. ربط قطع الغيار</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">تخصيص القطع من المخزون للتذكرة، مما يقوم بتحديث الكميات تلقائياً وتجهيز التكلفة المالية.</p>
-        </div>
-        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-yellow-500 glow-green border-4 border-black order-1 md:order-2">
-          <i class="fas fa-microchip text-white text-xl"></i>
-        </div>
-        <div class="flex-1 md:pl-12 order-3">
-          <div class="glass-effect p-4 rounded-2xl border border-white/5 opacity-60">
-             <div class="text-[10px] flex justify-between font-bold"><span>شاشة iPhone 14</span><span class="text-red-400">-1 قطعة</span></div>
-             <div class="mt-2 text-[9px] text-gray-500 italic">تم خصمها من المخزون الرئيسي</div>
+        <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+            <h4 class="text-xl font-bold text-green-400 mb-2">01. إنشاء التذكرة والتوثيق</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">تسجيل بيانات العميل، حالة الجهاز، والخلل الفني مع طباعة إيصال استلام احترافي فوراً.</p>
           </div>
-        </div>
-      </div>
-
-      <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
-        <div class="flex-1 md:text-right md:pr-12 order-3 md:order-1">
-          <div class="glass-effect p-3 rounded-2xl border border-emerald-500/30 relative">
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-              <span class="text-[10px] font-bold text-emerald-400">إشعار الجاهزية</span>
-            </div>
-            <div class="bg-black/40 p-2 rounded-lg border border-white/5">
-               <p class="text-[9px] text-gray-300 leading-tight">
-                 "جهازك أصبح جاهزاً للاستلام الآن في الفرع. بانتظار زيارتك!"
-               </p>
-            </div>
-            <i class="fab fa-whatsapp absolute -bottom-2 -right-2 text-xl text-green-500"></i>
+          <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-green-500 glow-green border-4 border-black order-1 md:order-2">
+            <i class="fas fa-plus text-white text-xl"></i>
           </div>
-        </div>
-        <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 glow-green border-4 border-black order-1 md:order-2">
-          <i class="fas fa-bell text-white text-xl"></i>
-        </div>
-        <div class="flex-1 md:text-right md:pl-12 mb-6 md:mb-0 order-2 md:order-3">
-          <h4 class="text-xl font-bold text-emerald-400 mb-2">04. إشعار الجاهزية</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">بمجرد انتهاء الفني، يتم تغيير الحالة إلى "جاهز". يقوم النظام فوراً بإرسال إشعار للعميل يخبره بأن جهازه بانتظاره.</p>
-        </div>
-      </div>
-
-      <div class="relative flex flex-col md:flex-row items-center gap-6">
-        <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
-          <h4 class="text-xl font-bold text-white mb-2">05. بعد التسليم</h4>
-          <p class="text-gray-400 text-sm leading-relaxed">عند إغلاق التذكرة، يتم احتساب التكاليف والأرباح بدقة متناهية وترحيلها للتقارير.</p>
-          <ul class="text-right text-[12px] text-gray-500 mt-3 space-y-1">
-            <li><i class="fas fa-check text-green-500 ml-1"></i> إرسال الفاتورة النهائية PDF للعميل.</li>
-            <li><i class="fas fa-check text-green-500 ml-1"></i> ترحيل الأرباح لتقرير المبيعات اليومي.</li>
-          </ul>
-        </div>
-        <div class="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-cyan-600 glow-green border-4 border-black order-1 md:order-2">
-          <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
-        </div>
-        <div class="flex-1 md:pl-12 order-3">
-          <div class="glass-effect p-5 rounded-2xl border border-green-500/40 relative overflow-hidden group shadow-2xl">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-cyan-500"></div>
-            <div class="space-y-3">
-              <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                <span class="text-[10px] text-gray-400">إجمالي الفاتورة:</span>
-                <span class="text-sm font-bold text-white">450 ر.س</span>
-              </div>
-              <div class="flex justify-between items-center pt-1">
-                <span class="text-xs font-bold text-green-400">صافي الربح:</span>
-                <span class="text-xs font-black bg-green-500/20 px-2 py-0.5 rounded text-green-400">+ 230 ر.س</span>
+          <div class="flex-1 md:pl-12 order-3">
+            <div class="glass-effect p-4 rounded-2xl border border-white/5 opacity-60 scale-95">
+              <div class="flex justify-between text-[10px] mb-2 font-mono"><span>#T-1523</span><span class="text-green-400">جديد</span></div>
+              <div class="h-2 w-full bg-gray-800 rounded-full overflow-hidden">
+                <div class="bg-green-500 h-full w-1/4"></div>
               </div>
             </div>
-            <div class="mt-4 flex items-center gap-2 bg-green-500/10 p-2 rounded-xl border border-green-500/20">
-              <i class="fas fa-file-pdf text-red-500 text-xs"></i>
-              <span class="text-[9px] text-gray-300">تم إرسال الفاتورة عبر واتساب</span>
+          </div>
+        </div>
+
+        <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-1 md:text-right md:pr-12 order-3 md:order-1">
+            <div class="glass-effect p-4 rounded-2xl border border-cyan-500/30">
+              <div class="flex items-center gap-2 mb-2">
+                <i class="fab fa-whatsapp text-green-400"></i>
+                <span class="text-[10px] font-bold text-cyan-400">رسالة ترحيب تلقائية</span>
+              </div>
+              <div class="text-[10px] text-gray-500 font-mono leading-tight">"عزيزي العميل، تم استلام جهازك بنجاح بموجب التذكرة رقم #1523..."</div>
+            </div>
+          </div>
+          <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-cyan-500 glow-green border-4 border-black order-1 md:order-2">
+            <i class="fas fa-robot text-white text-xl"></i>
+          </div>
+          <div class="flex-1 md:text-right md:pl-12 mb-6 md:mb-0 order-2 md:order-3">
+            <h4 class="text-xl font-bold text-cyan-400 mb-2">02. إشعار العميل عبر واتساب</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">بمجرد الحفظ، يرسل النظام رسالة واتساب للعميل تحتوي على تفاصيل التذكرة ورابط تتبع الحالة مباشرة.</p>
+          </div>
+        </div>
+
+        <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+            <h4 class="text-xl font-bold text-yellow-400 mb-2">03. ربط قطع الغيار</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">تخصيص القطع من المخزون للتذكرة، مما يقوم بتحديث الكميات تلقائياً وتجهيز التكلفة المالية.</p>
+          </div>
+          <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-yellow-500 glow-green border-4 border-black order-1 md:order-2">
+            <i class="fas fa-microchip text-white text-xl"></i>
+          </div>
+          <div class="flex-1 md:pl-12 order-3">
+            <div class="glass-effect p-4 rounded-2xl border border-white/5 opacity-60">
+              <div class="text-[10px] flex justify-between font-bold"><span>شاشة iPhone 14</span><span class="text-red-400">-1 قطعة</span></div>
+              <div class="mt-2 text-[9px] text-gray-500 italic">تم خصمها من المخزون الرئيسي</div>
             </div>
           </div>
         </div>
+
+        <div class="relative mb-20 md:mb-32 flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-1 md:text-right md:pr-12 order-3 md:order-1">
+            <div class="glass-effect p-3 rounded-2xl border border-emerald-500/30 relative">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                <span class="text-[10px] font-bold text-emerald-400">إشعار الجاهزية</span>
+              </div>
+              <div class="bg-black/40 p-2 rounded-lg border border-white/5">
+                <p class="text-[9px] text-gray-300 leading-tight">
+                  "جهازك أصبح جاهزاً للاستلام الآن في الفرع. بانتظار زيارتك!"
+                </p>
+              </div>
+              <i class="fab fa-whatsapp absolute -bottom-2 -right-2 text-xl text-green-500"></i>
+            </div>
+          </div>
+          <div class="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 glow-green border-4 border-black order-1 md:order-2">
+            <i class="fas fa-bell text-white text-xl"></i>
+          </div>
+          <div class="flex-1 md:text-right md:pl-12 mb-6 md:mb-0 order-2 md:order-3">
+            <h4 class="text-xl font-bold text-emerald-400 mb-2">04. إشعار الجاهزية</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">بمجرد انتهاء الفني، يتم تغيير الحالة إلى "جاهز". يقوم النظام فوراً بإرسال إشعار للعميل يخبره بأن جهازه بانتظاره.</p>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-1 md:text-left md:pr-12 mb-6 md:mb-0 order-2 md:order-1">
+            <h4 class="text-xl font-bold text-white mb-2">05. بعد التسليم</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">عند إغلاق التذكرة، يتم احتساب التكاليف والأرباح بدقة متناهية وترحيلها للتقارير.</p>
+            <ul class="text-right text-[12px] text-gray-500 mt-3 space-y-1">
+              <li><i class="fas fa-check text-green-500 ml-1"></i> إرسال الفاتورة النهائية PDF للعميل.</li>
+              <li><i class="fas fa-check text-green-500 ml-1"></i> ترحيل الأرباح لتقرير المبيعات اليومي.</li>
+            </ul>
+          </div>
+          <div class="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-cyan-600 glow-green border-4 border-black order-1 md:order-2">
+            <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
+          </div>
+          <div class="flex-1 md:pl-12 order-3">
+            <div class="glass-effect p-5 rounded-2xl border border-green-500/40 relative overflow-hidden group shadow-2xl">
+              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-cyan-500"></div>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                  <span class="text-[10px] text-gray-400">إجمالي الفاتورة:</span>
+                  <span class="text-sm font-bold text-white">450 ر.س</span>
+                </div>
+                <div class="flex justify-between items-center pt-1">
+                  <span class="text-xs font-bold text-green-400">صافي الربح:</span>
+                  <span class="text-xs font-black bg-green-500/20 px-2 py-0.5 rounded text-green-400">+ 230 ر.س</span>
+                </div>
+              </div>
+              <div class="mt-4 flex items-center gap-2 bg-green-500/10 p-2 rounded-xl border border-green-500/20">
+                <i class="fas fa-file-pdf text-red-500 text-xs"></i>
+                <span class="text-[9px] text-gray-300">تم إرسال الفاتورة عبر واتساب</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="mysr-form"></div>
+  <div class="mysr-form"></div>
   <!-- CTA Section -->
-<section id="pricing-section" class="py-20 bg-black text-white" dir="rtl">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-4">خطط الأسعار</h2>
-      <div class="flex justify-center items-center gap-4">
-        <span>شهري</span>
-        <button id="billing-toggle" class="w-14 h-7 bg-green-500 rounded-full relative transition-all">
-          <div id="toggle-circle" class="w-5 h-5 bg-white rounded-full absolute top-1 right-1 transition-all"></div>
-        </button>
-        <span>سنوي (خصم 15%)</span>
+  <section id="pricing-section" class="py-20 bg-black text-white" dir="rtl">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">خطط الأسعار</h2>
+        <div class="flex justify-center items-center gap-4">
+          <span>شهري</span>
+          <button id="billing-toggle" class="w-14 h-7 bg-green-500 rounded-full relative transition-all">
+            <div id="toggle-circle" class="w-5 h-5 bg-white rounded-full absolute top-1 right-1 transition-all"></div>
+          </button>
+          <span>سنوي (خصم 15%)</span>
+        </div>
       </div>
-    </div>
 
-    <div id="plans-container" class="grid lg:grid-cols-3 gap-8"></div>
+      <div id="plans-container" class="grid lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+  <div class="mt-8 flex justify-center items-center gap-6 opacity-80 pb-12">
+    <img src="https://moyasar.com/images/about/mada-artwork.svg" alt="Mada" class="h-6">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-8 w-auto">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" class="h-8 w-auto">
   </div>
-</section>
-<div class="mt-8 flex justify-center items-center gap-6 opacity-80 pb-12">
-<img src="https://moyasar.com/images/about/mada-artwork.svg" alt="Mada" class="h-6">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-8 w-auto">
-  
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" class="h-8 w-auto">
-</div>
   <!-- Footer -->
   <footer class="relative border-t border-gray-800 py-16">
     <div class="absolute inset-0 bg-gradient-to-b from-gray-950 to-black"></div>
-    
+
     <div class="relative z-10 grid gap-12 px-6 mx-auto max-w-7xl lg:grid-cols-3">
       <div>
         <div class="flex items-center gap-3 mb-6">
@@ -667,7 +703,7 @@
           ثورة في إدارة عمليات صيانة الهواتف باستخدام أحدث تقنيات سطح المكتب.
         </p>
       </div>
-      
+
       <div>
         <h4 class="font-bold text-lg mb-6">اللغات المدعومة</h4>
         <ul class="space-y-3 text-gray-400">
@@ -681,17 +717,16 @@
           </li>
         </ul>
       </div>
-      
+
       <div>
         <h4 class="font-bold text-lg mb-6">تواصل معنا</h4>
-        <a target="_blank" href="https://wa.me/+966502238684" 
-           class="inline-flex items-center gap-3 text-gray-400 hover:text-green-400 transition-colors text-2xl">
+        <a target="_blank" href="https://wa.me/+966502238684" class="inline-flex items-center gap-3 text-gray-400 hover:text-green-400 transition-colors text-2xl">
           <i class="fab fa-whatsapp"></i>
           <span class="text-base">واتساب</span>
         </a>
       </div>
     </div>
-    
+
     <div class="relative z-10 px-6 mx-auto mt-16 text-center max-w-7xl">
       <div class="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent mb-8"></div>
       <p class="text-gray-500">© 2024-2026 Reparo. جميع الحقوق محفوظة.</p>
@@ -699,57 +734,54 @@
   </footer>
 
   <script>
+    let isYearly = false;
 
+    const plansData = [{
+        "id": "standard",
+        "name": "معياري",
+        "price_monthly": 49,
+        "price_yearly": 499,
+        "old_price_yearly": 588, // 49 * 12 = 588
+        "features": ["500 فاتورة صيانة", "500 عميل", "500 قطعة بالمخزون ", "مخزون متقدم وتنبيهات", "تصدير واستيراد البيانات", "تقارير وتحليلات", "دعم فني 24/7"],
+        "not_included": ["إشعارات واتساب", "ادراة الموردين المتقدمة", "التقارير المتقدمة"],
+        "button_text": "اشترك في المعياري",
+        "popular": false
+      },
 
+      {
+        "id": "premium",
+        "name": "مميز",
+        "price_monthly": 89,
+        "price_yearly": 899,
+        "old_price_yearly": 1068, // 89 * 12 = 1068
+        "features": ["فواتير صيانة غير محدودة", "عميل غير محدود", "قطع غير محدودة بالمخزون", "مخزون متقدم وتنبيهات", "تصدير واستيراد البيانات", "تقارير وتحليلات", "دعم فني 24/7", "إشعارات واتساب", "ادراة الموردين المتقدمة", "التقارير المتقدمة"],
+        "not_included": [],
+        "button_text": "اشترك في المميز",
+        "popular": true
+      },
+      {
+        "id": "custom",
+        "name": "مخصص",
+        "price_monthly": "-",
+        "price_yearly": "-",
+        "old_price_yearly": "-", // 89 * 12 = 1068
+        "features": ["حلول مخصصة حسب احتياجاتك", "دعم فني مخصص", "تدريب فريق العمل", "تكامل مع أنظمتك الحالية"],
+        "not_included": [],
+        "button_text": " اطلب عرض مخصص",
+        "popular": false
+      }
+    ];
 
-let isYearly = false; 
+    function renderPlans() {
+      const container = document.getElementById('plans-container');
+      container.innerHTML = '';
 
-const plansData = [
-    {
-      "id": "standard",
-      "name": "معياري",
-      "price_monthly": 49,
-      "price_yearly": 499,
-      "old_price_yearly": 588, // 49 * 12 = 588
-      "features": ["500 فاتورة صيانة","500 عميل","500 قطعة بالمخزون ", "مخزون متقدم وتنبيهات", "تصدير واستيراد البيانات", "تقارير وتحليلات", "دعم فني 24/7"],
-      "not_included": ["إشعارات واتساب", "ادراة الموردين المتقدمة", "التقارير المتقدمة"],
-      "button_text": "اشترك في المعياري",
-      "popular": false
-    },
+      plansData.forEach(plan => {
+        const price = isYearly ? plan.price_yearly : plan.price_monthly;
+        const oldPrice = isYearly ? plan.old_price_yearly : null;
+        const period = isYearly ? '/ سنوياً' : '/ شهرياً';
 
-    {
-      "id": "premium",
-      "name": "مميز",
-      "price_monthly": 89,
-      "price_yearly": 899,
-      "old_price_yearly": 1068, // 89 * 12 = 1068
-      "features": ["فواتير صيانة غير محدودة", "عميل غير محدود", "قطع غير محدودة بالمخزون", "مخزون متقدم وتنبيهات", "تصدير واستيراد البيانات", "تقارير وتحليلات", "دعم فني 24/7", "إشعارات واتساب", "ادراة الموردين المتقدمة", "التقارير المتقدمة"],
-      "not_included": [],
-      "button_text": "اشترك في المميز",
-      "popular": true
-    },
-    {
-      "id": "custom",
-      "name": "مخصص",
-      "price_monthly": "-",
-      "price_yearly": "-",
-      "old_price_yearly": "-", // 89 * 12 = 1068
-      "features": ["حلول مخصصة حسب احتياجاتك", "دعم فني مخصص", "تدريب فريق العمل", "تكامل مع أنظمتك الحالية"],
-      "not_included": [],
-      "button_text": " اطلب عرض مخصص",
-      "popular": false
-    }
-];
-function renderPlans() {
-  const container = document.getElementById('plans-container');
-  container.innerHTML = ''; 
-
-  plansData.forEach(plan => {
-    const price = isYearly ? plan.price_yearly : plan.price_monthly;
-    const oldPrice = isYearly ? plan.old_price_yearly : null;
-    const period = isYearly ? '/ سنوياً' : '/ شهرياً';
-    
-    const card = `
+        const card = `
       <div class="glass-effect p-8 rounded-3xl border ${plan.popular ? 'border-green-500 scale-105 z-10' : 'border-gray-800'} relative flex flex-col h-full">
         ${plan.popular ? '<span class="absolute -top-4 right-1/2 translate-x-1/2 bg-green-500 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">الأكثر طلباً</span>' : ''}
         
@@ -780,111 +812,150 @@ function renderPlans() {
           `).join('')}
         </ul>
         
-    <button disabled 
-            onclick="handlePayment('${plan.id}', ${price}, 'Test@gmail.com')" 
-            class="w-full py-4 rounded-2xl font-black transition-all duration-300 
-            disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-800 disabled:text-gray-500 disabled:shadow-none disabled:hover:scale-100
-            /* Original Classes */
-            ${plan.popular ? 'bg-green-500 text-black shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.02]' : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'}">
-      ${plan.button_text}
-    </button>
+      <button disabled 
+              onclick="handlePayment('${plan.id}', ${price}, 'Test@gmail.com')" 
+              class="w-full py-4 rounded-2xl font-black transition-all duration-300 
+              disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-800 disabled:text-gray-500 disabled:shadow-none disabled:hover:scale-100 border-dashed disabled:border-gray-700
+              ${plan.popular ? 'bg-green-500 text-black shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-[1.02]' : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'}">
+              <span class="flex items-center justify-center gap-2">
+                <i class="fas fa-clock text-xs"></i> ${plan.button_text} (قريباً)
+              </span>
+      </button>
       </div>
     `;
-    container.innerHTML += card;
-  });
-}
-//  Toggle Logic
-document.getElementById('billing-toggle').addEventListener('click', () => {
-  isYearly = !isYearly;
-  const circle = document.getElementById('toggle-circle');
-  circle.style.transform = isYearly ? 'translateX(-28px)' : 'translateX(0)';
-  renderPlans();
-});
+        container.innerHTML += card;
+      });
+    }
+    //  Toggle Logic
+    document.getElementById('billing-toggle').addEventListener('click', () => {
+      isYearly = !isYearly;
+      const circle = document.getElementById('toggle-circle');
+      circle.style.transform = isYearly ? 'translateX(-28px)' : 'translateX(0)';
+      renderPlans();
+    });
 
 
-renderPlans();
-//  TODO: Handle Payment (Moyasar Integration)
-function handlePayment(planId, price, userEmail) {
+    renderPlans();
+    //  TODO: Handle Payment (Moyasar Integration)
+    function handlePayment(planId, price, userEmail) {
 
-  Moyasar.init({
-    element: '.mysr-form',
-    amount: price * 100,
-    currency: 'SAR',
-    description: `Reparo Subscription: ${planId}`,
-    publishable_api_key: 'pk_test_zWUjxWzEnnqMMdTonfzBjsKdRjvqZ1Equves1kmo',
-    methods: ['creditcard'],
-    language: 'ar',
-    callback_url: `http://-Server-HERE-/api/verify?planId=${planId}&email=${userEmail}`
-  });
-}
+      Moyasar.init({
+        element: '.mysr-form',
+        amount: price * 100,
+        currency: 'SAR',
+        description: `Reparo Subscription: ${planId}`,
+        publishable_api_key: 'pk_test_zWUjxWzEnnqMMdTonfzBjsKdRjvqZ1Equves1kmo',
+        methods: ['creditcard'],
+        language: 'ar',
+        callback_url: `http://-Server-HERE-/api/verify?planId=${planId}&email=${userEmail}`
+      });
+    }
 
 
-  // Ticket Management Animation
-    const tickets = [
-      { text: "فاتورة #T-1523 - iPhone 14 Pro - استبدال شاشة + بطارية", status: "قيد التنفيذ", statusColor: "yellow" },
-      { text: "فاتورة #T-1524 - Samsung S23 - إصلاح منفذ الشحن", status: "جديدة", statusColor: "green" },
-      { text: "فاتورة #T-1525 - iPad Air - تغيير زجاج الشاشة", status: "مكتملة", statusColor: "blue" },
-      { text: "فاتورة #T-1526 - iPhone 13 - مشكلة في الصوت", status: "قيد الفحص", statusColor: "purple" },
-      { text: "فاتورة #T-1527 - Xiaomi 12 - استبدال كاميرا خلفية", status: "جاهزة للتسليم", statusColor: "cyan" }
+    // Ticket Management Animation
+    const tickets = [{
+        text: "فاتورة #T-1523 - iPhone 14 Pro - استبدال شاشة + بطارية",
+        status: "قيد التنفيذ",
+        statusColor: "yellow"
+      },
+      {
+        text: "فاتورة #T-1524 - Samsung S23 - إصلاح منفذ الشحن",
+        status: "جديدة",
+        statusColor: "green"
+      },
+      {
+        text: "فاتورة #T-1525 - iPad Air - تغيير زجاج الشاشة",
+        status: "مكتملة",
+        statusColor: "blue"
+      },
+      {
+        text: "فاتورة #T-1526 - iPhone 13 - مشكلة في الصوت",
+        status: "قيد الفحص",
+        statusColor: "purple"
+      },
+      {
+        text: "فاتورة #T-1527 - Xiaomi 12 - استبدال كاميرا خلفية",
+        status: "جاهزة للتسليم",
+        statusColor: "cyan"
+      }
     ];
 
     const ticketTextElement = document.getElementById('ticket-text');
     const ticketStatusElement = document.getElementById('ticket-status');
 
     function changeTicket() {
-      if(!ticketTextElement) return;
+      if (!ticketTextElement) return;
       ticketTextElement.style.opacity = '0';
       ticketStatusElement.style.opacity = '0';
-      
+
       setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * tickets.length);
         const ticket = tickets[randomIndex];
-        
+
         ticketTextElement.innerText = ticket.text;
         ticketStatusElement.innerText = ticket.status;
-        
+
         // Update status color
         ticketStatusElement.className = `text-xs font-bold px-3 py-1 rounded-full transition-all duration-500`;
         ticketStatusElement.classList.add(`bg-${ticket.statusColor}-500/20`, `text-${ticket.statusColor}-400`);
-        
+
         ticketTextElement.style.opacity = '1';
         ticketStatusElement.style.opacity = '1';
       }, 500);
     }
 
     // Inventory Management Animation
-    const inventoryItems = [
-      { text: "شاشة iPhone 13 Pro - المورد: الشركة المتحدة - السعر: 450 ر.س", count: "12 قطعة", color: "blue" },
-      { text: "بطارية iPhone 14 - المورد: المجموعة الدولية - السعر: 180 ر.س", count: "25 قطعة", color: "green" },
-      { text: "شاشة Samsung S23 - المورد: تك سبلاي - السعر: 520 ر.س", count: "8 قطع", color: "yellow" },
-      { text: "كاميرا Xiaomi 12 خلفية - المورد: موبايل بارتس - السعر: 320 ر.س", count: "5 قطع", color: "red" },
-      { text: "منفذ شحن iPhone 12 - المورد: الشركة المتحدة - السعر: 95 ر.س", count: "18 قطعة", color: "cyan" }
+    const inventoryItems = [{
+        text: "شاشة iPhone 13 Pro - المورد: الشركة المتحدة - السعر: 450 ر.س",
+        count: "12 قطعة",
+        color: "blue"
+      },
+      {
+        text: "بطارية iPhone 14 - المورد: المجموعة الدولية - السعر: 180 ر.س",
+        count: "25 قطعة",
+        color: "green"
+      },
+      {
+        text: "شاشة Samsung S23 - المورد: تك سبلاي - السعر: 520 ر.س",
+        count: "8 قطع",
+        color: "yellow"
+      },
+      {
+        text: "كاميرا Xiaomi 12 خلفية - المورد: موبايل بارتس - السعر: 320 ر.س",
+        count: "5 قطع",
+        color: "red"
+      },
+      {
+        text: "منفذ شحن iPhone 12 - المورد: الشركة المتحدة - السعر: 95 ر.س",
+        count: "18 قطعة",
+        color: "cyan"
+      }
     ];
 
     const inventoryTextElement = document.getElementById('inventory-text');
     const inventoryCountElement = document.getElementById('inventory-count');
 
     function changeInventory() {
-      if(!inventoryTextElement) return;
+      if (!inventoryTextElement) return;
       inventoryTextElement.style.opacity = '0';
       inventoryCountElement.style.opacity = '0';
-      
+
       setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * inventoryItems.length);
         const item = inventoryItems[randomIndex];
-        
+
         inventoryTextElement.innerText = item.text;
         inventoryCountElement.innerText = item.count;
-        
+
         // Update count color based on quantity
         inventoryCountElement.className = `text-xs font-bold px-3 py-1 rounded-full transition-all duration-500`;
         inventoryCountElement.classList.add(`bg-${item.color}-500/20`, `text-${item.color}-400`);
-        
+
         inventoryTextElement.style.opacity = '1';
         inventoryCountElement.style.opacity = '1';
       }, 500);
     }
-   // WhatsApp Templates Animation
+    // WhatsApp Templates Animation
     const templates = [
       "مرحباً عميلنا، تم إنشاء الفاتورة رقم #101 الخاصة بـ iPhone 13. سنبدأ العمل قريباً.",
       "مرحباً، الفاتورة رقم #102 قيد التنفيذ حالياً. فريقنا الفني يعمل على جهازك الآن.",
@@ -898,7 +969,7 @@ function handlePayment(planId, price, userEmail) {
 
 
     function changeTemplate() {
-      if(!textElement) return;
+      if (!textElement) return;
       textElement.style.opacity = '0';
       setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * templates.length);
@@ -913,7 +984,7 @@ function handlePayment(planId, price, userEmail) {
     setInterval(changeTicket, 4500);
     setInterval(changeInventory, 5000);
     setInterval(changeTemplate, 4000);
-    
+
     setTimeout(changeTicket, 1000);
     setTimeout(changeInventory, 1500);
     setTimeout(changeTemplate, 2000);
@@ -948,7 +1019,7 @@ function handlePayment(planId, price, userEmail) {
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -1020,7 +1091,7 @@ function handlePayment(planId, price, userEmail) {
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
       const floatingElements = document.querySelectorAll('.floating');
-      
+
       floatingElements.forEach((el, index) => {
         const speed = 0.5 + (index * 0.1);
         el.style.transform = `translateY(${scrolled * speed}px)`;
@@ -1103,4 +1174,5 @@ function handlePayment(planId, price, userEmail) {
     }
   </script>
 </body>
+
 </html>
